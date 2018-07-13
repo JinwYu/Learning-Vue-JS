@@ -1,6 +1,42 @@
 <template>
-  <div id="app">
-    <app-navbar></app-navbar>
+  <div>
+    <div id="app">
+
+      <app-navbar></app-navbar>
+
+      <!-- Main content -->
+      <div id="content">
+
+        <!-- Headline section -->
+        <h1>Headlines</h1>
+        <div id="headline-section">
+          <app-headline></app-headline>
+          <app-headline></app-headline>
+        </div>
+
+        <!-- Article section -->
+        <h1>Articles</h1>
+        <div id="article-section">
+          <b-card-group deck>
+            <app-article></app-article>
+            <app-article></app-article>
+            <app-article></app-article>
+            <app-article></app-article>
+            <app-article></app-article>
+            <app-article></app-article>
+          </b-card-group>
+        </div>
+
+
+      </div>
+
+      <!-- Footer -->
+      <div id="footer"
+
+      </div>
+
+      <app-footer></app-footer>
+    </div>
   </div>
 </template>
 
@@ -12,36 +48,43 @@ export default {
 
     }
   }
-}
+};
 </script>
 
 <style>
-/*
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 100%;
 }
 
-h1, h2 {
-  font-weight: normal;
+#content{
+  max-width: 1300px;
+  margin: 0 auto;
+  background: lightgray; /* Debug purposes*/
+  padding: 10px;
+  word-wrap: break-word;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+#article-section{
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
+#headline-section{
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
-a {
-  color: #42b983;
+h1{
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
-*/
+
+
+
+
+
 </style>

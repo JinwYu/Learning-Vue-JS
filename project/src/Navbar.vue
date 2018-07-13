@@ -1,27 +1,45 @@
 <template>
 	<div>
-		<b-navbar toggleable="md" type="dark" variant="info">
+		<b-navbar toggleable="md" class="navbar bg-company-red" type="dark">
 
-		  <b-navbar-brand href="#">
-		  	<img src="./assets/logo.png" alt="Logo" style="width:40px;">
-		  </b-navbar-brand>
+		<!-- Logo -->
+        <b-navbar-brand href="#">
+	  		<img src="./assets/logo.png" alt="Logo" style="width:40px;">
+	  	</b-navbar-brand>
 
-		  <!-- Collaps toggler -->
-		  <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+       	<!-- Collapse toggler -->
+	  	<b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
 		  <b-collapse is-nav id="nav_collapse"> 	
 
 		    <!-- Right aligned nav items -->
-		    <b-navbar-nav class="ml-auto">
-		    
-		    <!-- The links -->
-		    <b-navbar-nav>
-		      <b-nav-item href="#">Link1</b-nav-item>
-		      <b-nav-item href="#" disabled>Link2</b-nav-item>
+		    <b-navbar-nav class="ml-auto">		    
+			    <!-- The links -->
+			    <b-navbar-nav>
+			    	<li class="nav-item">
+	                	<a href="#" class="nav-link">Users</a>
+	                </li>
+	                <li class="nav-item">
+	                    <a href="#" class="nav-link">Products</a>
+	                </li>
+			      <b-nav-item href="#">NEWS</b-nav-item>
+			      <b-nav-item href="#">AUTHORS</b-nav-item>
+			      <b-nav-item href="#">EXPLORE</b-nav-item>
+			      <b-nav-item href="#">ABOUT</b-nav-item>
+			      <b-nav-item href="#">CONTACT</b-nav-item>
+			    </b-navbar-nav>
 		    </b-navbar-nav>
-		    </b-navbar-nav>
+
 		  </b-collapse>
 
 		</b-navbar>
 	</div>
 </template>
+
+<style>
+	/* Navbar background color */
+	.bg-company-red {
+    	background-color: #2699FB;
+	}
+
+</style>
