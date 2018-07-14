@@ -2,6 +2,7 @@
   <div>
     <div id="app">
 
+      <!-- Navbar -->
       <app-navbar></app-navbar>
 
       <!-- Main content -->
@@ -10,23 +11,16 @@
         <!-- Headline section -->
         <h1>Headlines</h1>
         <div id="headline-section">
-          <app-headline></app-headline>
-          <app-headline></app-headline>
+          <app-headline v-bind:headlines="headlines"></app-headline>
         </div>
 
         <!-- Article section -->
         <h1>Articles</h1>
         <div id="article-section">
           <b-card-group deck>
-            <app-article></app-article>
-            <app-article></app-article>
-            <app-article></app-article>
-            <app-article></app-article>
-            <app-article></app-article>
-            <app-article></app-article>
+            <app-articles v-bind:articles="articles"></app-articles>
           </b-card-group>
-        </div>
-
+        </div>       
 
       </div>
 
@@ -41,14 +35,41 @@
 </template>
 
 <script>
-export default {
-  name: 'app',
-  data () {
-    return {
 
+// Importing the news data from the local json file.
+// The data is "static" i.e. no reactive and does not change.
+import NEWS_DATA from './data/news_data.json'
+
+export default{
+
+    data(){
+      return{
+        articles: NEWS_DATA.articles,
+        headlines: NEWS_DATA.headlines
+      }
     }
-  }
+    
+
 };
+
+
+
+/*
+
+<div v-for="photo in photos">
+        <my-photo-component :image_source="photo.src"></my-photo-component>
+    </div>
+
+
+    <div>
+            <div v-for="item in $options.myJson.headlines" :key="item.Title">
+              {{item.Title}}
+            </div>
+        </div>
+
+*/
+
+
 </script>
 
 <style>
@@ -58,29 +79,43 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
+  background: #ebf1f5;
 }
 
 #content{
-  max-width: 1300px;
+  max-width: 1320px;
   margin: 0 auto;
   background: lightgray; /* Debug purposes*/
-  padding: 10px;
+  padding: 30px;
   word-wrap: break-word;
 }
 
 #article-section{
-  max-width: 1300px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 #headline-section{
-  max-width: 1300px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
-h1{
+.card-group{
+  max-width: 100%;
+  margin: 0 auto;
   padding-top: 1%;
   padding-bottom: 1%;
+}
+
+h1{
+  color: #2699fb;
+  font-size: 40px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+app-article{
+  width: 1000px;
 }
 
 

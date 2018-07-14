@@ -11,15 +11,18 @@ Vue.use(BootstrapVue);
 import Navbar from './Navbar.vue';
 import Footer from './Footer.vue';
 import Headline from './Headline.vue';
-import Article from './Article.vue';
+import Articles from './Articles.vue';
 
 // Register custom components.
 Vue.component("app-navbar", Navbar);
 Vue.component("app-footer", Footer);
 Vue.component("app-headline", Headline);
-Vue.component("app-article", Article);
+Vue.component("app-articles", Articles);
 
 new Vue({
   el: '#app',
   render: h => h(App)
 })
+
+
+

@@ -37,6 +37,10 @@
 </template>
 
 <style>
+	.nav-item{
+		font-size: 15px;
+	}
+
 	/* Navbar background color */
 	.bg-company-red {
     	background-color: #2699FB;
