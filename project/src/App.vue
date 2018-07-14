@@ -11,15 +11,13 @@
         <!-- Headline section -->
         <h1>Headlines</h1>
         <div id="headline-section">
-          <app-headline v-bind:headlines="headlines"></app-headline>
+          <app-headlines v-bind:headlines="headlines"></app-headlines>
         </div>
 
         <!-- Article section -->
         <h1>Articles</h1>
         <div id="article-section">
-          <b-card-group deck>
             <app-articles v-bind:articles="articles"></app-articles>
-          </b-card-group>
         </div>       
 
       </div>
@@ -100,12 +98,7 @@ export default{
   margin: 0 auto;
 }
 
-.card-group{
-  max-width: 100%;
-  margin: 0 auto;
-  padding-top: 1%;
-  padding-bottom: 1%;
-}
+
 
 h1{
   color: #2699fb;
@@ -116,6 +109,14 @@ h1{
 
 app-article{
   width: 1000px;
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    #content{
+      padding: 0px;
+    }
 }
 
 

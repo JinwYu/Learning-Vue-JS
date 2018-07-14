@@ -1,24 +1,19 @@
 <template>
-	<div>
-		<div <div v-for="item in articles" :key="item.imageUrl">	
+	<div class="row">
 
-			<b-card 
-			:title="item.Title"
-	        :img-src="item.imageUrl"
-	        img-alt="Card image"
-	        img-top>
-
-		        <p class="card-text">
-		            {{item.Text}}
-		        </p>
-
-		        <a href="#" class="card-link">READ MORE</a>
-
-	    	</b-card>
-
+		<div class="column" v-for="item in articles" :key="item.imageUrl">
+			
+			<div class="card">
+				  <img :src="item.imageUrl" alt="Avatar">
+				  <div class="container">
+				    <h4><b>{{item.Title}}</b></h4> 
+				    <p>{{item.Text}}</p> 
+				  </div>
+			</div>
+	    	
 		</div>	
-	
-    </div>
+
+	</div>
 </template>
 
 
@@ -41,18 +36,52 @@ export default{
 
 
 <style scoped>
-	.card{
-		width: 100%;
+* {
+    box-sizing: border-box;
+}
 
-		/* Shadow 
-		padding: 1%;
-		-moz-box-shadow:1px 1px 1px #BEBEBE;
-		-webkit-box-shadow:1px 1px 1px #BEBEBE;
-		box-shadow:1px 1px 1px #BEBEBE;
-		filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='1');
-		-msfilter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='1');
-		left:767;
-		top:370;
-		*/
-	}
+img{
+	width: 100%;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+	/* Using "flex" to make children of this div, the parent, have the same height as the parent. */
+	display: -ms-flex;
+	display: -webkit-flex; 
+	display: flex; 
+
+	/* 3 articles on a row. */
+    float: left;
+    width: 33.33%;
+    padding: 0; /*15px;*/
+
+    /* Fakes space between the divs for the cards with borders */
+	float:left;
+	border-right: 2em solid white;
+	border-bottom: 2em solid white;
+	border-left: 2em solid white;
+
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+}
+
+/* Uses "flex" */
+.column > div { flex:1; }
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.card{
+
+	/* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
 </style>
