@@ -23,11 +23,8 @@
       </div>
 
       <!-- Footer -->
-      <div id="footer"
-
-      </div>
-
       <app-footer></app-footer>
+
     </div>
   </div>
 </template>
@@ -76,45 +73,41 @@ export default{
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 100%;
   background: #ebf1f5;
 }
 
 #content{
-  max-width: 1320px;
+  max-width: 80%;
   margin: 0 auto;
-  background: lightgray; /* Debug purposes*/
+  /*background: white; /* Debug purposes*/
+  background: #ebf1f5;
   padding: 30px;
   word-wrap: break-word;
 }
-
-#article-section{
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-#headline-section{
-  max-width: 100%;
-  margin: 0 auto;
-}
-
 
 
 h1{
   color: #2699fb;
   font-size: 40px;
   padding-top: 1%;
-  padding-bottom: 1%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 0;
 }
 
-app-article{
-  width: 1000px;
+#headline-section{
+  padding-bottom: 6em;
 }
 
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+
+
+/* Responsive layout */
+@media screen and (max-width: 1080px) {
     #content{
+      max-width: 100%;
+
+      /* Remove padding when in mobile mode */
       padding: 0px;
     }
 }

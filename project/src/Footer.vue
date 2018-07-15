@@ -3,9 +3,10 @@
     	<div id="container">
 			<!-- Footer -->
 			<footer>
+				<div class="test">
 
 			    <!-- Footer Links -->
-			    <div class="container-fluid text-center text-md-left">
+			    <div class="container-fluid text-md-left">
 
 			      <!-- Grid row -->
 			      <div class="row">
@@ -40,7 +41,7 @@
 			        <!-- Grid column -->
 
 			        <!-- Grid column -->
-			        <div class="col-md-3 mb-md-0 mb-3">
+			        <div class="col-md-4 mb-md-0 mb-3">
 
 			            <!-- Links -->
 			            <h5 class="text-uppercase">CUSTOMER SERVICE</h5>
@@ -85,6 +86,8 @@
 			    </div>
 			    <!-- Footer Links -->
 
+			    </div>
+
 			  </footer>
 			  <!-- Footer -->
 		</div>
@@ -108,8 +111,11 @@ a {
 }
 
 .row{
-	max-width: 70%;
+	max-width: 80%;
   	margin: auto;
+
+  	padding-left: 2em;
+  	padding-right: 1em;
 }
 
 #about{
@@ -121,6 +127,16 @@ a {
 	font-size: 20px;
 	padding-bottom: 10px;
 }
+
+@media screen and (max-width: 1080px) {
+    .row{
+		max-width: 100%;
+
+		padding-left: 0em;
+  		padding-right: 0em;
+	}
+}
+
 
 
 

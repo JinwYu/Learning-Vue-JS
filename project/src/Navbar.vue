@@ -2,48 +2,93 @@
 	<div>
 		<b-navbar toggleable="md" class="navbar bg-company-red" type="dark">
 
-		<!-- Logo -->
-        <b-navbar-brand href="#">
-	  		<img src="./assets/logo.png" alt="Logo" style="width:40px;">
-	  	</b-navbar-brand>
+			<div class="container">
 
-       	<!-- Collapse toggler -->
-	  	<b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+				<!-- Logo -->
+				<ul class="nav nav-justified">
+			      	<li>
+			      		<img src="./assets/ateleslogo.png" alt="Logo">
+			      	</li>    
 
-		  <b-collapse is-nav id="nav_collapse"> 	
+			       	<!-- Collapse toggler padding-left:13em; -->
+			       	<div id="hamburger">
+				  		<b-navbar-toggle target="nav_collapse" ></b-navbar-toggle>
+				  	</div>
 
-		    <!-- Right aligned nav items -->
-		    <b-navbar-nav class="ml-auto">		    
-			    <!-- The links -->
-			    <b-navbar-nav>
-			    	<li class="nav-item">
-	                	<a href="#" class="nav-link">Users</a>
-	                </li>
-	                <li class="nav-item">
-	                    <a href="#" class="nav-link">Products</a>
-	                </li>
-			      <b-nav-item href="#">NEWS</b-nav-item>
-			      <b-nav-item href="#">AUTHORS</b-nav-item>
-			      <b-nav-item href="#">EXPLORE</b-nav-item>
-			      <b-nav-item href="#">ABOUT</b-nav-item>
-			      <b-nav-item href="#">CONTACT</b-nav-item>
-			    </b-navbar-nav>
-		    </b-navbar-nav>
+					<b-collapse is-nav id="nav_collapse"> 
+					    <!-- Right aligned nav items -->
+					    <b-navbar-nav class="ml-auto">		
+					    <ul class="nav navbar-nav navbar-right">
+				            <li><a href="#">NEWS</a></li>
+				            <li><a href="#">AUTHORS</a></li>
+				            <li><a href="#">EXPLORE</a></li>
+				            <li><a href="#">ABOUT</a></li>
+				            <li><a href="#">CONTACT</a></li>
+				        </ul>     
+			
+					    </b-navbar-nav>
+					</b-collapse>
+				</ul>
 
-		  </b-collapse>
+			  </div>
 
 		</b-navbar>
 	</div>
 </template>
 
-<style>
-	.nav-item{
-		font-size: 15px;
+<style scoped>
+
+/* Change text color in the navbar. */
+.nav.navbar-nav.navbar-right li a {
+    color: white;
+    font-size: 15px;
+}
+
+img{
+	/* Ugly way to move the logo so that it is aligned vertically with the content. */
+	padding-left: 1em;
+}
+
+
+
+.container{
+	max-width: 79%;
+}
+
+.nav-item{
+	font-size: 15px;
+	text-align: left;
+}
+
+/* Navbar background color override. */
+.bg-company-red {
+	background-color: #2699FB;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 1080px) {
+	.container{
+		max-width: 100%;
 	}
 
-	/* Navbar background color */
-	.bg-company-red {
-    	background-color: #2699FB;
+	img{
+		padding-left: 0em;
 	}
+}
+
+/* Max width is set to 764px because the built in toggle for the bootstrapVue navbar appears at that number */
+@media screen and (max-width: 764px) {
+
+	#hamburger{
+	border: 2px solid white;
+	position:absolute;
+	right: 2em;
+	top: 1.2em;
+	padding: 0;
+	margin: 0;
+	}
+}
+
+
 
 </style>
