@@ -20,8 +20,7 @@ Vue.component("app-headlines", Headlines);
 Vue.component("app-articles", Articles);
 
 // Import CSS files.
-require('./assets/css/navbar.css');
-
+import css from './assets/css/navbar.css';
 
 new Vue({
   el: '#app',

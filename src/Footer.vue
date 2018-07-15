@@ -59,6 +59,13 @@
 
 <style scoped>
 
+/* Ugly quick fix to get rid of overlapping text when at around 1024px horizontally */
+/* Should be fixed with divs that stack instead but too late to fix now. */
+/* Maybe trigger the stacking which is already implemented at an earlier resolution */
+.col-md-2{
+	overflow: hidden;
+}
+
 #container{
   	background: #2699FB;
 }
@@ -92,7 +99,7 @@ a {
 	padding-bottom: 10px;
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1024px) {
     .row{
 		max-width: 100%;
 
@@ -100,8 +107,6 @@ a {
   		padding-right: 0em;
 	}
 }
-
-
 
 
 </style>
