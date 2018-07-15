@@ -26,7 +26,7 @@
 export default{
 	props: {
 		articles:{
-			type: Array // Controls if the component has received an Array.
+			type: Array // Controls if the component has received an Array, fails if not.
 		}
 	},
     data(){
@@ -65,17 +65,6 @@ a{
 	font-size: 12px;
 }
 
-.read-more{
-	padding: 2.5em;
-}
-
-.text-container{
-	/* Hide text overflow, fixed height to cut text that is too long */
-	height: 15em;
-	overflow: hidden;
-	padding: 2.5em;
-}
-
 .container { 
 	/*background: red; */
   	max-width: 100%;
@@ -102,6 +91,18 @@ a{
 
 	/* Add space between articles */
 	margin: 1.5em;
+}
+
+/* Read more button */
+.read-more{
+	padding: 2.5em;
+}
+
+.text-container{
+	/* Hide text overflow, fixed height to cut text that is too long */
+	height: 15em;
+	overflow: hidden;
+	padding: 2.5em;
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
@@ -138,17 +139,17 @@ a{
 
     /* Fade out when small screen */
     .fade-out {
-	  position: relative;
+		position: relative;
 
 	}
 	.fade-out:after {
-	  content: '';
-	  position: absolute;
-	  top: 0;
-	  bottom: 0;
-	  left: 0;
-	  right: 0;
-	  background-image: linear-gradient( rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 85% );
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-image: linear-gradient( rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 85% );
 	}
 }
 

@@ -38,26 +38,19 @@
 
 <style scoped>
 
-/* Change text color in the navbar. */
-.nav.navbar-nav.navbar-right li a {
-    color: white;
-    font-size: 15px;
-}
-
 img{
 	/* Ugly way to move the logo so that it is aligned vertically with the content. */
 	padding-left: 1em;
 }
 
-
-
 .container{
 	max-width: 79%;
 }
 
-.nav-item{
-	font-size: 15px;
-	text-align: left;
+/* Change text color in the navbar. */
+.nav.navbar-nav.navbar-right li a {
+    color: white;
+    font-size: 15px;
 }
 
 /* Navbar background color override. */
@@ -88,7 +81,5 @@ img{
 	margin: 0;
 	}
 }
-
-
 
 </style>

@@ -39,21 +39,30 @@ export default{
       return{
 
       }
-    }
-    
-
+    }   
 };	
 </script>
 
 
 <style scoped>
 
+.container{	
+	/* Using "flex" to make children of this div, the parent, have the same height as the parent. */
+	display: -ms-flex;
+	display: -webkit-flex; 
+	display: flex; 	
+
+	max-width: 100%;
+	padding-top: 1.5%;
+	padding-bottom: 1%;	
+}
+
 .row{
+	background: white;
+
 	/* Get rid of the extra glutter caused by Bootstrap and "cols". */
 	margin-left: 0;
-    margin-right: 0;
-
-	background: white;
+    margin-right: 0;	
 
 	/* Add shadows to create the "card" effect */
     box-shadow: 0 px 4px 0 rgba(0,0,0,0.1);
@@ -103,27 +112,8 @@ export default{
 	background-size: cover;
 }
 
-.container{
-	
-	/* Using "flex" to make children of this div, the parent, have the same height as the parent. */
-	display: -ms-flex;
-	display: -webkit-flex; 
-	display: flex; 	
-
-	max-width: 100%;
-
-	padding-top: 1.5%;
-	padding-bottom: 1%;	
-}
-
 /* Responsive layout */
 @media screen and (max-width: 764px) {
-
-	.text-container{
-		/* Hide text overflow, fixed height to cut text that is too long */
-		height: 30em;
-		overflow: hidden;
-	}
 
 	.container{
 		padding-top: 5%;
@@ -132,22 +122,28 @@ export default{
 		padding-right: 0px;
 	}
 
+	.text-container{
+		/* Hide text overflow, fixed height to cut text that is too long */
+		height: 30em;
+		overflow: hidden;
+	}	
+
 	.read-more{
 		padding-top: 10px;
 	}	
 
 	/* Only fade out text when the window is narrow. */
     .fade-out {
-	  position: relative;
+		position: relative;
 	}
 	.fade-out:after {
-	  content: '';
-	  position: absolute;
-	  top: 0;
-	  bottom: 0;
-	  left: 0;
-	  right: 0;
-	  background-image: linear-gradient( rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 1) 100% );
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-image: linear-gradient( rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 1) 100% );
 	}
 }
 

@@ -19,6 +19,10 @@ Vue.component("app-footer", Footer);
 Vue.component("app-headlines", Headlines);
 Vue.component("app-articles", Articles);
 
+// Import CSS files.
+require('./assets/css/navbar.css');
+
+
 new Vue({
   el: '#app',
   render: h => h(App)

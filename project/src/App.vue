@@ -1,36 +1,35 @@
 <template>
-  <div>
-    <div id="app">
+    <div>
+        <div id="app">
 
-      <!-- Navbar -->
-      <app-navbar></app-navbar>
+            <!-- Navbar -->
+            <app-navbar></app-navbar>
 
-      <!-- Main content -->
-      <div id="content">
+            <!-- Main content -->
+            <div id="content">
 
-        <!-- Headline section -->
-        <h1>Headlines</h1>
-        <div id="headline-section">
-          <app-headlines v-bind:headlines="headlines"></app-headlines>
+                <!-- Headline section -->
+                <h1>Headlines</h1>
+                <div id="headline-section">
+                  <app-headlines v-bind:headlines="headlines"></app-headlines>
+                </div>
+
+                <!-- Article section -->
+                <h1>Articles</h1>
+                <div id="article-section">
+                    <app-articles v-bind:articles="articles"></app-articles>
+                </div>       
+
+            </div>
+
+            <!-- Footer -->
+            <app-footer></app-footer>
+
         </div>
-
-        <!-- Article section -->
-        <h1>Articles</h1>
-        <div id="article-section">
-            <app-articles v-bind:articles="articles"></app-articles>
-        </div>       
-
-      </div>
-
-      <!-- Footer -->
-      <app-footer></app-footer>
-
     </div>
-  </div>
 </template>
 
 <script>
-
 // Importing the news data from the local json file.
 // The data is "static" i.e. no reactive and does not change.
 import NEWS_DATA from './data/news_data.json'
@@ -42,29 +41,8 @@ export default{
         articles: NEWS_DATA.articles,
         headlines: NEWS_DATA.headlines
       }
-    }
-    
-
+    }   
 };
-
-
-
-/*
-
-<div v-for="photo in photos">
-        <my-photo-component :image_source="photo.src"></my-photo-component>
-    </div>
-
-
-    <div>
-            <div v-for="item in $options.myJson.headlines" :key="item.Title">
-              {{item.Title}}
-            </div>
-        </div>
-
-*/
-
-
 </script>
 
 <style>
@@ -85,7 +63,6 @@ export default{
   word-wrap: break-word;
 }
 
-
 h1{
   color: #2699fb;
   font-size: 40px;
@@ -99,9 +76,6 @@ h1{
   padding-bottom: 6em;
 }
 
-
-
-
 /* Responsive layout */
 @media screen and (max-width: 1080px) {
     #content{
@@ -111,9 +85,4 @@ h1{
       padding: 0px;
     }
 }
-
-
-
-
-
 </style>
