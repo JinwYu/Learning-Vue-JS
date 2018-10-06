@@ -7,7 +7,7 @@
 				<!-- Logo -->
 				<ul class="nav nav-justified">
 			      	<li>
-			      		<img src="./assets/ateleslogo.png" alt="Logo">
+			      		
 			      	</li>    
 
 			       	<!-- Collapse toggler padding-left:13em; -->
